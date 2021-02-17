@@ -9,11 +9,58 @@
 </head>
 
 <body>
-	<h1 style="color:red;">Welcome to Noah</h1>
-	<img src="/home/retrymp3/Downloads/luffy1.jpeg" alt="Luffy">
-	<p>Checkout our page for viewing exiting deals.</p>
-	<img src="/home/retrymp3/Downloads/deals1.jpeg" alt="Deals">
-	<p>Want to signup or login?</p>
+	
+	<style>
+	
+	body {
+	background-color: #003366; 
+	}
+	
+	li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	}
+	
+	li a:hover {
+  	background-color: white;
+ 	color: red;
+	}
+	
+	li a.active {
+ 	background-color: #0099CC;
+ 	color: #66FF33;
+	}
+	
+	ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 10%;
+	background-color: #0099CC;
+	height: 100%; /* Full height */
+	position: fixed; /* Make it stick, even on scroll */
+	overflow: auto; /* Enable scrolling if the sidenav has too much content */
+	}
+	
+	{ 
+	background-color: #003366; 
+	}
+	</style>
+	<ul>
+	<li><a class="active" href="index.html">Home</a></li>
+	<li><a href="login.html">Login</a></li>
+	<li><a href="signup.html">Signup</a></li>
+	<li><a href="about.html">About</a></li>
+	</ul>
+	
+	<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+	<h1 style="color:#0099CC;">Welcome to Noah</h1>
+	<img src="luffy1.jpeg" alt="Luffy">
+	<p style="color:#0099CC;">Checkout our page for viewing exiting deals.</p>
+	<img src="deals1.jpeg" alt="Deals">
+	<p style="color:#0099CC;">Want to signup or login?</p>
 	<style>
 		button {
 		border: none;
@@ -29,5 +76,6 @@
 	</style>
 	<button onclick="document.location='login.html'">Login</button>
 	<button onclick="document.location='signup.html'">Signup</button>
+	</div>
 </body>
 </html>
