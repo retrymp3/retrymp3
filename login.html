@@ -2,16 +2,17 @@
 <html>
 <head>
 <title> Login </title>
-	<link rel="stylesheet type="text/css" href="./style.css">
+	<link rel="stylesheet type="text/css" href="./css/style.css">
 <body>
 	<div class="log">
 	<img src="./simpson-sad.jpeg" class="avatar">
 	<h1> Login </h1>
-	<form>
+	<form action="signup.php" method="post">
+		<<div class="form-group">
 		<p>Username</p>
-		<input type="text" name="" placeholder="Enter Username">
+		<input type="text" name="username" class="form-control" placeholder="Enter Username" id="username" />
 		<p>Password</p>
-		<input type="password" name="" placeholder="Enter Password">
+		<input type="password" name="password" class="form-control" placeholder="Enter Password" id="password" />
 		<input type="submit" name="" value="Login">
 	</form>
 	</div>
