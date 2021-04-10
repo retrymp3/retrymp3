@@ -41,7 +41,7 @@ session_start();
 	<div class="main">
 	 <ul>
 	 	<li><a href="shop.php">Shop</a></li>
-		<li><a href="index.php">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 	 	<li><a href="login.php">Login</a></li>
 	 	<li class="active"><a href="sign-up.php">Signup</a></li>
 	 	<li><a href="about.html">About</a></li>
