@@ -5,10 +5,10 @@
 }
 
 function ready() {
-    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger') /* stores the buttons with the class 'btn-danger' */
+    for (var i = 0; i < removeCartItemButtons.length; i++) { /* looping through all the buttons */
         var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
+        button.addEventListener('click', removeCartItem) /* listening for the 'click' event and removing the cart-item of cart */
     }
 
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
@@ -35,9 +35,9 @@ function purchaseClicked() {
     updateCartTotal()
 }
 
-function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
+function removeCartItem(event) { /* function for removing the cart contents */
+    var buttonClicked = event.target /* event.target is a property on the event-object and it will be whatever the button we clicked on. */
+    buttonClicked.parentElement.parentElement.remove() /* removing the parent of the parent div to remove full of the cart row */
     updateCartTotal()
 }
 
@@ -81,9 +81,9 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 
-function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+function updateCartTotal() { /* function to update the 'total' field */
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0] /* returns an array of elements with class name 'cart-items', we just want one so '[0]' */
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row') /* returns an array of elements with class name 'cart-row' */
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
