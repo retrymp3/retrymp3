@@ -30,7 +30,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
+						header("Location: shop.php");
 						die;
 					}
 				}
@@ -56,7 +56,7 @@ session_start();
 	<div class="main">
 	 <ul>
 	 	<li><a href="shop.php">Shop</a></li>
-		<li><a href="index.php">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 	 	<li class="active"><a href="login.php">Login</a></li>
 	 	<li><a href="sign-up.php">Signup</a></li>
 	 	<li><a href="about.html">About</a></li>
