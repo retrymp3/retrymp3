@@ -14,10 +14,10 @@ function ready() { /* function to setup all the buttons */
     var quantityInputs = document.getElementsByClassName('cart-quantity-input') /* function to control the quantity and add update the total price */
     for (var i = 0; i < quantityInputs.length; i++) { /* looping through all the elements with class, 'cart-quantity-input' */
         var input = quantityInputs[i]
-        input.addEventListener('change', quantityChanged) /* listens for the 'change' event which is fired when we change the quantity, and runs the quantityChanged nction. */
+        input.addEventListener('change', quantityChanged) /* listens for the 'change' event which is fired when we change the quantity, and runs the quantityChanged function. */
     }
 
-    var addToCartButtons = document.getElementsByClassName('shop-item-button')
+    var addToCartButtons = document.getElementsByClassName('shop-item-button') /* setting the add to cart button */
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
@@ -26,11 +26,11 @@ function ready() { /* function to setup all the buttons */
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-function purchaseClicked() {
+function purchaseClicked() { /* function for removing all items from cart, and alert the user */
     alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
+    while (cartItems.hasChildNodes()) { /* when a child is present insdie the cart-items, looping through all the children inside the cart */
+        cartItems.removeChild(cartItems.firstChild) /* removes the first child inside the cart-item */
     }
     updateCartTotal()
 }
@@ -41,31 +41,30 @@ function removeCartItem(event) { /* function for removing the cart contents */
     updateCartTotal()
 }
 
-function quantityChanged(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+function quantityChanged(event) { /* function to be executed when we change the quantity */
+    var input = event.target /* sets the event.target into input variable which will be the input element */
+    if (isNaN(input.value) || input.value <= 0) { /* checks to see if inp is a number and checks if inp is less than or equal to 0. */
+        input.value = 1 /* seting the quantity value to 1. */
     }
     updateCartTotal()
 }
 
 function addToCartClicked(event) {
-    var button = event.target
-    var shopItem = button.parentElement.parentElement
+    var button = event.target /* sets the 'add to cart' button to button variable. */
+    var shopItem = button.parentElement.parentElement /* sets the parent of the parent div to get the actual 'shop-item' */
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src /* getting the source of the image */
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
 
-function addItemToCart(title, price, imageSrc) {
-    var cartRow = document.createElement('div')
+function addItemToCart(title, price, imageSrc) { /* function to add a row to the cart*/
+    var cartRow = document.createElement('div') /* create a 'div' element */
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-
-    var cartRowContents = `
+	/* generating a cart row. using back ticks for html which will be representd as a string, but we can use it for multiple lines. */
+    var cartRowContents = ` 
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
@@ -75,10 +74,10 @@ function addItemToCart(title, price, imageSrc) {
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
-    cartRow.innerHTML = cartRowContents
-    cartItems.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
-    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    cartRow.innerHTML = cartRowContents /* (innerHTML)since we are using html, insted of strings */
+    cartItems.append(cartRow) /* adding the cart-row to the end of the cart-items */
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem) /* adding the event listener for remove button after loading the page */
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged) /* adding the event listener for quantity after loading the page */
 }
 
 function updateCartTotal() { /* function to update the 'total' field */
@@ -93,6 +92,5 @@ function updateCartTotal() { /* function to update the 'total' field */
         var quantity = quantityElement.value /* since it is an input we need the value property insted of innerText */
         total = total + (price * quantity) /* adds the 'price * quantity' for all cart-rows and gives total at the end */
     }
-    total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = 'Rs.' + total /* puts the total price as innertext into the element with class 'cart-total-price'. */
 }
