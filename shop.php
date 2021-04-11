@@ -36,7 +36,7 @@ session_start();
                     <span class="shop-item-title">Adiddas</span>
                     <img class="shop-item-image" src="./img/addidas1.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.1200</span>
+                        <span class="shop-item-price">Rs.1199</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ session_start();
                     <span class="shop-item-title">Nike</span>
                     <img class="shop-item-image" src="./img/nike1.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.1500</span>
+                        <span class="shop-item-price">Rs.1499</span>
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ session_start();
                     <span class="shop-item-title">UCB</span>
                     <img class="shop-item-image" src="./img/ucb1.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.2000</span>
+                        <span class="shop-item-price">Rs.1999</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ session_start();
                     <span class="shop-item-title">Air jordan</span>
                     <img class="shop-item-image" src="./img/air_jordan.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.5000</span>
+                        <span class="shop-item-price">Rs.4999</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ session_start();
                     <span class="shop-item-title">T-Shirt</span>
                     <img class="shop-item-image" src="./img/t-shirt1.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.400</span>
+                        <span class="shop-item-price">Rs.399</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ session_start();
                     <span class="shop-item-title">Track Pants</span>
                     <img class="shop-item-image" src="./img/track-pants.jpeg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">Rs.600</span>
+                        <span class="shop-item-price">Rs.599</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
