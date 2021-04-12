@@ -61,7 +61,7 @@ function addToCartClicked(event) {
 
 function addItemToCart(title, price, imageSrc) { /* function to add a row to the cart*/
     var cartRow = document.createElement('div') /* create a 'div' element */
-    cartRow.classList.add('cart-row')
+    cartRow.classList.add('cart-row') /* addinfg the 'cart-row' class so it also gets styled */
     var cartItems = document.getElementsByClassName('cart-items')[0]
 	/* generating a cart row. using back ticks for html which will be representd as a string, but we can use it for multiple lines. */
     var cartRowContents = ` 
