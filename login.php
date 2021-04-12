@@ -6,31 +6,31 @@ session_start(); /* creates a session or resumes the current one*/
 	include("functions.php");
 
 
-	if($_SERVER['REQUEST_METHOD'] == "POST")
+	if($_SERVER['REQUEST_METHOD'] == "POST") /* checks if the reqest method is post*/
 	{
 		//something was posted
-		$user_name = $_POST['username'];
-		$password = $_POST['password'];
+		$user_name = $_POST['username']; /* assigns the username post data to $user_name */
+		$password = $_POST['password']; /* assigns the password post data to $password */
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
 			//read from database
-			$query = "select * from signup where username = '$user_name' limit 1";
-			$result = mysqli_query($con, $query);
+			$query = "select * from signup where username = '$user_name' limit 1"; /* query to check if the username is in the table */
+			$result = mysqli_query($con, $query); /* connects and queries the $query */
 
-			if($result)
+			if($result) /* checking if it returned data */
 			{
 				if($result && mysqli_num_rows($result) > 0)
 				{
 
 					$user_data = mysqli_fetch_assoc($result);
 					
-					if($user_data['password'] === $password)
+					if($user_data['password'] === $password) /* checks if the password in db is same as the given password */
 					{
 
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: shop.php");
+						$_SESSION['user_id'] = $user_data['user_id']; /* since the check_login() checks if the session id is set, we have to assign it in the login page */
+						header("Location: shop.php"); /* since the */
 						die;
 					}
 				}
