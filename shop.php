@@ -1,10 +1,10 @@
 <?php
-session_start();
+session_start(); /* creates a session or resumes the current one*/
 
-	include("connection.php");
+	include("connection.php"); /* for including the php file in this page itself*/
 	include("functions.php");
 	
-	$user_data=check_login($con);
+	$user_data=check_login($con); /* function to check if the user is logged in */
 ?>
 
 <!DOCTYPE html>
