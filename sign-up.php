@@ -9,8 +9,8 @@ session_start(); /* creates a session or resumes the current one*/
 	{
 		//post request has been recieved
 		$user_name = $_POST['username']; /* assigns the username post data to $user_name */
-		$email = $_POST['email']; /* assigns the username post data to $email */
-		$password = $_POST['password']; /* assigns the username post data to $password */
+		$email = $_POST['email']; /* assigns the email post data to $email */
+		$password = $_POST['password']; /* assigns the password post data to $password */
 
 		if(!empty($user_name) && !empty($email) && !empty($password) && !is_numeric($user_name)) /* checking wether the variables are empty ot not, also wether it is numeric */
 		{
@@ -19,7 +19,7 @@ session_start(); /* creates a session or resumes the current one*/
 			$user_id = random_num(20); /* generating random number with len, 20 for user_id */
 			$query = "insert into signup (user_id,username,email,password) values ('$user_id','$user_name','$email','$password')"; /* inserting values into the database */
 
-			mysqli_query($con, $query); /* performs the query against the database */
+			mysqli_query($con, $query); /* conects and performs the query against the database */
 
 			//redirect to login page
 			header("Location: login.php");
