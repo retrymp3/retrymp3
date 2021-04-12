@@ -1,26 +1,27 @@
 <?php 
-session_start();
+session_start(); /* creates a session or resumes the current one*/
 
-	include("connection.php");
-	include("functions.php");
+	include("connection.php"); /* for including the php file in this page itself*/
+	include("functions.php"); 
 
 
-	if($_SERVER['REQUEST_METHOD'] == "POST")
+	if($_SERVER['REQUEST_METHOD'] == "POST") /* checks if the reqest method is post*/
 	{
-		//something was posted
-		$user_name = $_POST['username'];
-		$email = $_POST['email'];
-		$password = $_POST['password'];
+		//post request has been recieved
+		$user_name = $_POST['username']; /* assigns the username post data to $user_name */
+		$email = $_POST['email']; /* assigns the username post data to $email */
+		$password = $_POST['password']; /* assigns the username post data to $password */
 
-		if(!empty($user_name) && !empty($email) && !empty($password) && !is_numeric($user_name))
+		if(!empty($user_name) && !empty($email) && !empty($password) && !is_numeric($user_name)) /* checking wether the variables are empty ot not, also wether it is numeric */
 		{
 
 			//save to database
-			$user_id = random_num(20);
-			$query = "insert into signup (user_id,username,email,password) values ('$user_id','$user_name','$email','$password')";
+			$user_id = random_num(20); /* generating random number with len, 20 for user_id */
+			$query = "insert into signup (user_id,username,email,password) values ('$user_id','$user_name','$email','$password')"; /* inserting values into the database */
 
-			mysqli_query($con, $query);
+			mysqli_query($con, $query); /* performs the query against the database */
 
+			//redirect to login page
 			header("Location: login.php");
 			die;
 		}else
@@ -52,7 +53,7 @@ session_start();
 	<h1> Sign-up </h1>
 	
 	<div id="box">
-	  <form method="post">
+	  <form method="post"> <! setting the request method as post >
 		<p>Username</p>
 		<input id="username" type="text" name="username" placeholder="Enter Username"  />
 
@@ -67,4 +68,3 @@ session_start();
 </body>
 </head>
 </html>
-
