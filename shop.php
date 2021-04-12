@@ -5,6 +5,8 @@ session_start(); /* creates a session or resumes the current one*/
 	include("functions.php");
 	
 	$user_data=check_login($con); /* function to check if the user is logged in */
+	// now $user_data will contain all the info of the user
+	
 ?>
 
 <!DOCTYPE html>
