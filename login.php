@@ -1,8 +1,8 @@
 <?php 
 
-session_start();
+session_start(); /* creates a session or resumes the current one*/
 
-	include("connection.php");
+	include("connection.php"); /* for including the php file in this page itself*/
 	include("functions.php");
 
 
@@ -66,7 +66,7 @@ session_start();
 	<img src="./img/simpson-sad.jpeg" class="avatar">
 	<h1> Login </h1>
 	<div id="box">
-	  <form method="post">
+	  <form method="post"> <! setting the request method as post >
 		  <p>Username</p>
 		  <input id="username" type="text" name="username" placeholder="Enter Username"  />
 		  <p>Password</p>
@@ -78,4 +78,3 @@ session_start();
 </body>
 </head>
 </html>
-
