@@ -1,2 +1,2 @@
 # Website
-Full stack website for bi0s
+Full stack website
