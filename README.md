@@ -14,21 +14,16 @@ Pull requests merged into repositories I don't own, ordered by the star count of
 
 | Repository | Stars | Contribution |
 | :--- | ---: | :--- |
-| **[coollabsio/coolify](https://github.com/coollabsio/coolify)** | 59,620 | [#4288 Fix for the Self-XSS](https://github.com/coollabsio/coolify/pull/4288) |
+| **[coollabsio/coolify](https://github.com/coollabsio/coolify)** | 59,621 | [#4288 Fix for the Self-XSS](https://github.com/coollabsio/coolify/pull/4288) |
 | **[GoogleCloudPlatform/python-docs-samples](https://github.com/GoogleCloudPlatform/python-docs-samples)** | 8,117 | [#10341 FIx for arbitrary javascript injection](https://github.com/GoogleCloudPlatform/python-docs-samples/pull/10341) |
 | **[mozilla/bedrock](https://github.com/mozilla/bedrock)** | 1,330 | [#17222 Apply py-svg-hush sanitized output to SVG uploads and reject oversized sanitized output](https://github.com/mozilla/bedrock/pull/17222) |
 | **[mozmeao/springfield](https://github.com/mozmeao/springfield)** | 8 | [#1472 Reject SVG uploads when sanitized output exceeds max size](https://github.com/mozmeao/springfield/pull/1472) |
 
-_4 pull requests across 4 repositories totalling 69,075 stars._
-
 <!-- CONTRIBUTIONS:END -->
 
-### Security Research
+### Writeups
 
-- **Google** — vulnerability in Google Cloud; listed in Google's Hall of Fame
-- **Mozilla** — stored XSS via SVG sanitizer bypass in the Firefox.com CMS
-- **CVEs** — five assignments, high and medium severity
-- **PacketStorm** — multiple published exploits
+- [Bypassing a 3 layer SVG sanitizer: Stored XSS in Mozilla](https://profile-chi-jade.vercel.app/writing/springfield-svg-sanitizer-bypass). The bypass, the parser differential, and the missing `write()`.
 
 ### Focus
 

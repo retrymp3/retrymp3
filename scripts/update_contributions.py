@@ -156,9 +156,6 @@ def render_table(repos):
     if not repos:
         return "_No external contributions found yet._"
 
-    total_prs = sum(len(repo["prs"]) for repo in repos)
-    total_stars = sum(repo["stars"] for repo in repos)
-
     lines = [
         "| Repository | Stars | Contribution |",
         "| :--- | ---: | :--- |",
@@ -187,16 +184,6 @@ def render_table(repos):
                 )
             )
 
-    lines.append("")
-    lines.append(
-        "_{} pull request{} across {} repositor{} totalling {} stars._".format(
-            total_prs,
-            "" if total_prs == 1 else "s",
-            len(repos),
-            "y" if len(repos) == 1 else "ies",
-            format_stars(total_stars),
-        )
-    )
     return "\n".join(lines)
 
 
