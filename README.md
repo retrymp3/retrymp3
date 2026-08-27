@@ -14,10 +14,10 @@ Pull requests merged into repositories I don't own, ordered by the star count of
 
 | Repository | Stars | Contribution |
 | :--- | ---: | :--- |
-| **[coollabsio/coolify](https://github.com/coollabsio/coolify)** | 61,049 | [#4288 Fix for the Self-XSS](https://github.com/coollabsio/coolify/pull/4288) |
-| **[GoogleCloudPlatform/python-docs-samples](https://github.com/GoogleCloudPlatform/python-docs-samples)** | 8,126 | [#10341 FIx for arbitrary javascript injection](https://github.com/GoogleCloudPlatform/python-docs-samples/pull/10341) |
+| **[coollabsio/coolify](https://github.com/coollabsio/coolify)** | 61,106 | [#4288 Fix for the Self-XSS](https://github.com/coollabsio/coolify/pull/4288) |
+| **[GoogleCloudPlatform/python-docs-samples](https://github.com/GoogleCloudPlatform/python-docs-samples)** | 8,127 | [#10341 FIx for arbitrary javascript injection](https://github.com/GoogleCloudPlatform/python-docs-samples/pull/10341) |
 | **[mozilla/bedrock](https://github.com/mozilla/bedrock)** | 1,333 | [#17222 Apply py-svg-hush sanitized output to SVG uploads and reject oversized sanitized output](https://github.com/mozilla/bedrock/pull/17222) |
-| **[mozmeao/springfield](https://github.com/mozmeao/springfield)** | 8 | [#1472 Reject SVG uploads when sanitized output exceeds max size](https://github.com/mozmeao/springfield/pull/1472) |
+| **[mozmeao/springfield](https://github.com/mozmeao/springfield)** | 9 | [#1472 Reject SVG uploads when sanitized output exceeds max size](https://github.com/mozmeao/springfield/pull/1472) |
 
 <!-- CONTRIBUTIONS:END -->
 
